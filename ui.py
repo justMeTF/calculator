@@ -11,7 +11,7 @@ class View(QWidget):
         self.te1 = QPlainTextEdit()
         self.te1.setReadOnly(True)
 
-        self.btn1=QPushButton('Message',self)
+        self.btn1=QPushButton('Calc',self)
         self.btn2=QPushButton('Clear',self)
 
         self.le1=QLineEdit('0',self)
@@ -48,7 +48,9 @@ class View(QWidget):
         self.resize(256,256)
         self.show()
 
-    def activateMessage(self,text):
+
+    def setDisplay(self,text):
         self.te1.appendPlainText(text)
+
     def clearMessage(self):
         self.te1.clear()
