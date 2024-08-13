@@ -22,7 +22,11 @@ class Control:
     def mul(self,a,b):
         return a*b
     def div(self,a,b):
-        if b==0: return 0
+        try:
+            if b==0:
+                raise Exception("Divisor Error")
+        except Exception as e:
+            return e
         return a/b
     def pow(self,a,b):
         return pow(a,b)
