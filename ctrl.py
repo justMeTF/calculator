@@ -22,6 +22,7 @@ class Control:
     def mul(self,a,b):
         return a*b
     def div(self,a,b):
+        if b==0: return 0
         return a/b
     def pow(self,a,b):
         return pow(a,b)
